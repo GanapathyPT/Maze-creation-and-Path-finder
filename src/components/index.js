@@ -11,7 +11,7 @@ export default function App() {
 
 	useEffect(() => {
 		createMaze(grid, setGrid)
-	}, [grid])
+	}, [])
 
 	const handleClick = (item) => {
 		if (!start)
