@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react"
-import ReactTimeout from 'react-timeout'
-import { ROWS, COLS } from "../consts"
 import { createMaze, getPath, getInitialGrid } from "../game"
 
 import Row from "./Row"
@@ -13,7 +11,7 @@ export default function App() {
 
 	useEffect(() => {
 		createMaze(grid, setGrid)
-	}, [])
+	}, [grid])
 
 	const handleClick = (item) => {
 		if (!start)
