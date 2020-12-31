@@ -11,6 +11,7 @@ export default function App() {
 
 	useEffect(() => {
 		createMaze(grid, setGrid)
+		// eslint-disable-next-line
 	}, [])
 
 	const handleClick = (item) => {
