@@ -28,32 +28,47 @@
 	background-color: rgba(0, 0, 0, .2);
 }
 
-.start {
+.grid__item.start {
 	background-color: green;
 }
 
-.start:hover {
+.grid__item.start:hover {
 	background-color: rgba(0, 255, 0, .5);
 }
 
-.end {
-	background-color: red !important;
+.grid__item.end {
+	background-color: red;
 }
 
-.end:hover {
-	background-color: rgba(255, 0, 0, .5) !important;
+.grid__item.end:hover {
+	background-color: rgba(255, 0, 0, .5);
 }
 
-.pathVisited {
-	background-color: rgba(0, 0, 255, .5) !important;
+.grid__item.path {
+	transition: transform 1s;
+	animation: makePath 1s forwards;
 }
 
-.pathVisited:hover {
-	background-color: rgba(0, 0, 255, .4) !important;
+@keyframes makePath {
+	0% {
+		transform: scale(0);
+		border-radius: 50%;
+	}
+	100% {
+		transform: scale(1);
+		border-radius: 0px;
+		background-color: rgba(0, 0, 255, .5);
+	}
 }
 
 .visited {
-	background-color: rgba(0, 0, 0, .1);
+	animation: makeVisited 1s forwards;
+}
+
+@keyframes makeVisited {
+	100% {
+		background-color: rgba(0, 0, 0, .2);
+	}
 }
 
 .reference {

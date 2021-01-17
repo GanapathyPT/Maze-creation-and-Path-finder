@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
-import { createMaze, getPath, getInitialGrid } from "../game"
-
+import { createMaze, getPath, getInitialGrid } from "../algorithm"
 import Row from "./Row"
 
 export default function App() {
@@ -15,6 +14,7 @@ export default function App() {
 	}, [])
 
 	const handleClick = (item) => {
+		if (path) return
 		if (!start)
 			setStart(item)
 		else if (!!start && item === start)
