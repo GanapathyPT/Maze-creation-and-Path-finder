@@ -56,7 +56,7 @@ export default function App() {
 						Searched
 					</div>
 					<div className="ref">
-						<div className="grid__item pathVisited mr" />
+						<div className="grid__item path mr" />
 						Path
 					</div>
 				</div>
